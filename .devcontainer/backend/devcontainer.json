@@ -1,0 +1,10 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/universal
+{
+	"name": "backend",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": ["../../docker-compose.yaml"],
+	"service": "backend",
+	"shutdownAction": "none",
+	"workspaceFolder": "/workspace/backend"
+}
