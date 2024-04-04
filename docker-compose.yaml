@@ -1,21 +1,23 @@
 version: '3'
-
 services:
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached  
     command: sleep infinity
     links:
       - backend
     ports: 
       - 3000:3000
 
-
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached  
     command: sleep infinity
     ports:
       - 5000:5000
